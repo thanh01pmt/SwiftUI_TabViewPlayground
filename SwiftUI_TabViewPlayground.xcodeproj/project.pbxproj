@@ -12,6 +12,7 @@
 		7402EAE92DE1A12C0006A95F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7402EAE82DE1A12C0006A95F /* Assets.xcassets */; };
 		7402EAEC2DE1A12C0006A95F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7402EAEB2DE1A12C0006A95F /* Preview Assets.xcassets */; };
 		7402EAF72DE1A1CD0006A95F /* TabViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402EAF62DE1A1CD0006A95F /* TabViewExample.swift */; };
+		7402EAF92DE1A2CE0006A95F /* ControllableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402EAF82DE1A2CE0006A95F /* ControllableTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7402EAE82DE1A12C0006A95F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7402EAEB2DE1A12C0006A95F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7402EAF62DE1A1CD0006A95F /* TabViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewExample.swift; sourceTree = "<group>"; };
+		7402EAF82DE1A2CE0006A95F /* ControllableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7402EAF62DE1A1CD0006A95F /* TabViewExample.swift */,
+				7402EAF82DE1A2CE0006A95F /* ControllableTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				7402EAE72DE1A12A0006A95F /* ContentView.swift in Sources */,
 				7402EAF72DE1A1CD0006A95F /* TabViewExample.swift in Sources */,
 				7402EAE52DE1A12A0006A95F /* SwiftUI_TabViewPlaygroundApp.swift in Sources */,
+				7402EAF92DE1A2CE0006A95F /* ControllableTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
