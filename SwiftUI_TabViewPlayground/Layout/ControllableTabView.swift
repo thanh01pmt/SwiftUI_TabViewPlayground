@@ -14,23 +14,25 @@ struct ControllableTabView: View {
         VStack {
             TabView(selection: $selectedTab) { // Liên kết với selectedTab
                 Text("Nội dung Tab 1")
-                    .tabItem {
-                        Label("Tab 1", systemImage: "1.circle")
-                    }
+                    .tabItem{}
                     .tag(0) // Gán tag 0
 
                 Text("Nội dung Tab 2")
-                    .tabItem {
-                        Label("Tab 2", systemImage: "2.circle")
-                    }
+                    .tabItem{}
                     .tag(1) // Gán tag 1
             }
 
             // Ví dụ: Nút để chuyển tab
-            Button("Chuyển đến Tab 2") {
-                selectedTab = 1 // Thay đổi giá trị selectedTab sẽ tự động chuyển tab
+            HStack {
+                Button("Tab 2") {
+                    selectedTab = 1 // Thay đổi giá trị selectedTab sẽ tự động chuyển tab
+                }
+                .padding()
+                Button("Tab 1") {
+                    selectedTab = 0 // Thay đổi giá trị selectedTab sẽ tự động chuyển tab
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }
