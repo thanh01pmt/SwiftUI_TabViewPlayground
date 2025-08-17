@@ -21,6 +21,7 @@ struct NewsFeedView: View {
                 Text("Nơi cập nhật những thông tin nóng hổi nhất.")
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
+                //
             }
         }
     }

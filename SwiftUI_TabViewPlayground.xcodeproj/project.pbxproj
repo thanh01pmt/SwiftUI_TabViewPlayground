@@ -126,6 +126,7 @@
 				7402EADD2DE1A12A0006A95F /* Sources */,
 				7402EADE2DE1A12A0006A95F /* Frameworks */,
 				7402EADF2DE1A12A0006A95F /* Resources */,
+				7433356C2E4852BD00075031 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -148,6 +149,7 @@
 				TargetAttributes = {
 					7402EAE02DE1A12A0006A95F = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -180,6 +182,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7433356C2E4852BD00075031 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ----------------- CẤU HÌNH SCRIPT -----------------\n\n# 1. Đường dẫn đến trình thông dịch Python 3\n# Sử dụng `which python3` trong Terminal để tìm đường dẫn chính xác nếu cần\nPYTHON_EXECUTABLE=\"/usr/bin/python3\" \n\n# 2. Tên của file script Python của bạn\nSCRIPT_NAME=\"file_tracker.py\"\n\n# 3. Tên thư mục output (phải khớp với script)\nOUTPUT_DIR_NAME=\"tracked_files\"\n\n# ----------------- LOGIC THỰC THI -----------------\n\n# Biến môi trường SRCROOT của Xcode trỏ đến thư mục gốc của dự án\nPROJECT_DIR=\"${SRCROOT}\"\nSCRIPT_PATH=\"${PROJECT_DIR}/${SCRIPT_NAME}\"\n\necho \"GitFileTracker: Running script from Xcode Build Phase...\"\necho \"Project Directory: ${PROJECT_DIR}\"\necho \"Script Path: ${SCRIPT_PATH}\"\n\n# Kiểm tra xem script có tồn tại không\nif [ -f \"${SCRIPT_PATH}\" ]; then\n  # Di chuyển đến thư mục dự án để script chạy đúng ngữ cảnh\n  cd \"${PROJECT_DIR}\"\n  \n  # Gọi script với các tham số cần thiết\n  # --check-update là hành động phù hợp nhất để chạy trong quá trình build\n  # Nó sẽ chỉ cập nhật nếu có commit mới, không tốn nhiều thời gian\n  ${PYTHON_EXECUTABLE} \"${SCRIPT_PATH}\" --project-path \"${PROJECT_DIR}\" --output-dir \"${OUTPUT_DIR_NAME}\" --check-update\n  \n  echo \"GitFileTracker: Script finished.\"\nelse\n  echo \"GitFileTracker: Warning - Script not found at ${SCRIPT_PATH}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7402EADD2DE1A12A0006A95F /* Sources */ = {
@@ -321,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_TabViewPlayground/Preview Content\"";
@@ -332,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makexyz.SwiftUI-TabViewPlayground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_TabViewPlayground/Preview Content\"";
@@ -361,6 +387,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

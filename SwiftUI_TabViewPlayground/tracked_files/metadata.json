@@ -1,0 +1,35 @@
+{
+  "last_commit": "a18bc172df04d1314589bc4135152612dd343554",
+  "tracked_files": {
+    "config": [
+      "Assets.xcassets/AccentColor.colorset/Contents.json",
+      "Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "Assets.xcassets/Contents.json",
+      "Preview Content/Preview Assets.xcassets/Contents.json"
+    ],
+    "swift": [
+      "ContentView.swift",
+      "SwiftUI_TabViewPlaygroundApp.swift",
+      "Views/NewsFeedbiew.swift",
+      "Views/PhotoGalleryView.swift",
+      "Views/SettingsPanelView.swift"
+    ],
+    "other": [
+      "file_tracker.py"
+    ]
+  },
+  "file_hashes": {
+    "Assets.xcassets/AccentColor.colorset/Contents.json": "55019f7265dde0a78318b0807f98e847",
+    "Assets.xcassets/AppIcon.appiconset/Contents.json": "656e426612a7126f2dc91453413e7c4a",
+    "Assets.xcassets/Contents.json": "9deb2ada1cc834bbebf8bbad9c8978a1",
+    "ContentView.swift": "ad958d1514b0f6d39f55a0484b6e4ff2",
+    "Preview Content/Preview Assets.xcassets/Contents.json": "9deb2ada1cc834bbebf8bbad9c8978a1",
+    "SwiftUI_TabViewPlaygroundApp.swift": "48fa57a26c4150ddbede6ff6260a9473",
+    "Views/NewsFeedbiew.swift": "f20da961033d921da0133e0a20984843",
+    "Views/PhotoGalleryView.swift": "97df7d68d75f313ed65faf6b8eaac7c7",
+    "Views/SettingsPanelView.swift": "e92f0c47253b51708946d31644efefe9",
+    "file_tracker.py": "f4efd7f68c12bf3a5be2ee1ab99f13cd"
+  },
+  "created": "2025-08-10T11:38:32.846209",
+  "updated": "2025-08-10T11:42:27.750088"
+}

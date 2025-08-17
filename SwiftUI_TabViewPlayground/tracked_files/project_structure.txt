@@ -1,0 +1,32 @@
+# Project Structure - SwiftUI_TabViewPlayground
+# Generated: 2025-08-10T11:42:27.713155
+================================================================================
+
+SwiftUI_TabViewPlayground/
+├── Assets.xcassets/
+│   ├── AccentColor.colorset/
+│   │   └── Contents.json 🔧
+│   ├── AppIcon.appiconset/
+│   │   └── Contents.json 🔧
+│   └── Contents.json 🔧
+├── Preview Content/
+│   └── Preview Assets.xcassets/
+│       └── Contents.json 🔧
+├── Views/
+│   ├── NewsFeedbiew.swift 🐦
+│   ├── PhotoGalleryView.swift 🐦
+│   └── SettingsPanelView.swift 🐦
+├── ContentView.swift 🐦
+├── file_tracker.py 📄
+└── SwiftUI_TabViewPlaygroundApp.swift 🐦
+
+================================================================================
+# STATISTICS
+================================================================================
+Total tracked files (respecting ignores): 10
+Total size: 20.89 KB
+
+Files by type:
+  🔧 Config: 4 files (40.0%)
+  📄 Other: 1 files (10.0%)
+  🐦 Swift: 5 files (50.0%)

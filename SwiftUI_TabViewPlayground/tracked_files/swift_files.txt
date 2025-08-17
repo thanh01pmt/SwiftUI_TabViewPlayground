@@ -1,0 +1,168 @@
+# Consolidated SWIFT Files
+# Generated: 2025-08-10T11:42:27.710351
+# Total files: 5
+================================================================================
+
+# FILE: ContentView.swift
+------------------------------------------------------------
+//
+//  ContentView.swift
+//  SwiftUI_TabViewPlayground
+//
+//  Created by Tony Pham on 24/5/25.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+
+================================================================================
+
+# FILE: SwiftUI_TabViewPlaygroundApp.swift
+------------------------------------------------------------
+//
+//  SwiftUI_TabViewPlaygroundApp.swift
+//  SwiftUI_TabViewPlayground
+//
+//  Created by Tony Pham on 24/5/25.
+//
+
+import SwiftUI
+
+@main
+struct SwiftUI_TabViewPlaygroundApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
+
+================================================================================
+
+# FILE: Views/NewsFeedbiew.swift
+------------------------------------------------------------
+//
+//  NewFeedbiew.swift
+//  SwiftUI_TabViewPlayground
+//
+//  Created by Tony Pham on 24/5/25.
+//
+
+import SwiftUI
+
+struct NewsFeedView: View {
+    var body: some View {
+        ZStack { // Sử dụng ZStack để đặt màu nền
+            Color.blue.opacity(0.2).ignoresSafeArea() // Màu nền nhẹ
+            VStack {
+                Image(systemName: "newspaper.fill")
+                    .font(.system(size: 60))
+                    .foregroundColor(.blue)
+                Text("Bảng Tin Tức")
+                    .font(.title)
+                    .padding()
+                Text("Nơi cập nhật những thông tin nóng hổi nhất.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+        }
+    }
+}
+
+#Preview {
+    NewsFeedView()
+}
+
+
+================================================================================
+
+# FILE: Views/PhotoGalleryView.swift
+------------------------------------------------------------
+//
+//  PhotoGallaryView.swift
+//  SwiftUI_TabViewPlayground
+//
+//  Created by Tony Pham on 24/5/25.
+//
+
+import SwiftUI
+
+struct PhotoGalleryView: View {
+    var body: some View {
+        ZStack {
+            Color.green.opacity(0.2).ignoresSafeArea()
+            VStack {
+                Image(systemName: "photo.on.rectangle.angled")
+                    .font(.system(size: 60))
+                    .foregroundColor(.green)
+                Text("Thư Viện Ảnh")
+                    .font(.title)
+                    .padding()
+                Text("Khám phá những khoảnh khắc tuyệt vời được ghi lại.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+        }
+    }
+}
+
+#Preview {
+    PhotoGalleryView()
+}
+
+
+================================================================================
+
+# FILE: Views/SettingsPanelView.swift
+------------------------------------------------------------
+//
+//  SettingPanelView.swift
+//  SwiftUI_TabViewPlayground
+//
+//  Created by Tony Pham on 24/5/25.
+//
+
+import SwiftUI
+
+struct SettingsPanelView: View {
+    var body: some View {
+        ZStack {
+            Color.orange.opacity(0.2).ignoresSafeArea()
+            VStack {
+                Image(systemName: "slider.horizontal.3")
+                    .font(.system(size: 60))
+                    .foregroundColor(.orange)
+                Text("Bảng Cài Đặt")
+                    .font(.title)
+                    .padding()
+                Text("Tùy chỉnh ứng dụng theo sở thích của bạn.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+        }
+    }
+}
+
+#Preview {
+    SettingsPanelView()
+}
+
+
+================================================================================
